@@ -1,3 +1,8 @@
+'''Scenario
+Create a test that clicks Start button and then waits for the progress bar to reach 75%. 
+Then the test should click Stop. 
+The less the differnce between value of the stopped progress bar and 75% the better your result.'''
+
 from playwright.sync_api import Playwright, sync_playwright, expect
 import time
 
@@ -14,11 +19,9 @@ def test_run(playwright: Playwright) -> None:
         if progress >= 75:
             page.get_by_role("button", name="Stop").click()
             break
-        time.sleep(0.1)  # Adding a short delay to avoid excessive CPU usage
     
     time.sleep(3)
 
-    # ---------------------
     context.close()
     browser.close()
 

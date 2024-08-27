@@ -1,13 +1,17 @@
+'''Scenario
+Find a button in the scroll view and record button click.
+Update your test to automatically scroll the button into a visible area.
+Then execute your test to make sure it works.'''
+
 import time
 from playwright.sync_api import Playwright, sync_playwright, expect
-
 
 def test_run(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
     page = context.new_page()
-    page.goto("http://www.uitestingplayground.com/scrollbars")
 
+    page.goto("http://www.uitestingplayground.com/scrollbars")
     # Wait until the element is visible and then scroll into view
     element = page.get_by_role("button", name="Hiding Button")
     element.wait_for(state="visible")
@@ -17,6 +21,5 @@ def test_run(playwright: Playwright) -> None:
     element.click()
     time.sleep(2)  # Adding delay after clicking to observe the result
 
-    # ---------------------
     context.close()
     browser.close()

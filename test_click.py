@@ -1,4 +1,6 @@
-#test_click.py
+'''Scenario
+Record button click. The button becomes green after clicking.
+Then execute your test to make sure that it is able to click the button.'''
 
 import time
 from playwright.sync_api import Playwright, sync_playwright, expect
@@ -13,13 +15,10 @@ def test_run(playwright: Playwright) -> None:
     context = browser.new_context()
     page = context.new_page()
     
-    logger.info('Navigating to the URL.')
     page.goto("http://www.uitestingplayground.com/click")
     page.get_by_role("button", name="Button That Ignores DOM Click").click()
     time.sleep(2)
-    logger.info('Close')
 
-    # ---------------------
     context.close()
     browser.close()
 

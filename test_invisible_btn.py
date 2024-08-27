@@ -1,3 +1,8 @@
+'''Scenario
+Learn locators of all buttons.
+In your testing scenario press Hide button.
+Determine if other buttons visible or not'''
+
 from playwright.sync_api import Playwright, sync_playwright, expect
 
 def test_run(playwright: Playwright) -> None:

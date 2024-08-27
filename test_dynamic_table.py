@@ -20,9 +20,8 @@ def test_run(playwright: Playwright) -> None:
     assert chrome_cpu_value == expected_cpu_value
     print("Test Passed: Chrome CPU value matches the expected value.")
 
-    time.sleep(10)
+    time.sleep(2)
 
-    # ---------------------
     context.close()
     browser.close()
 

@@ -6,14 +6,15 @@ def test_run(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
     page = context.new_page()
-    page.goto("https://the-internet.herokuapp.com/upload")
-    #page.locator("#file-upload").click()
-    page.locator("#file-upload").set_input_files("aaaaa.png")
-    page.get_by_role("button", name="Upload").click()
-    page.get_by_role("heading", name="File Uploaded!").click()
-    #time.sleep(1000)
 
-    # ---------------------
+    page.goto("https://the-internet.herokuapp.com/upload")
+    # Locate the file input element by its ID and upload the specified file
+    page.locator("#file-upload").set_input_files("aaaaa.png")
+    # Locate and click the "Upload" button
+    page.get_by_role("button", name="Upload").click()
+    #Validate
+    page.get_by_role("heading", name="File Uploaded!").click()
+
     context.close()
     browser.close()
 
