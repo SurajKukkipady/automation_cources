@@ -1,0 +1,1 @@
+This section covers python and playwright installation.

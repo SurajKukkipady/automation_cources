@@ -1,0 +1,28 @@
+Why Playwright?
+
+1. Multi-language support:
+   JavaScript, Python, C#, and Java.
+
+2. Web and API testing:
+   Supports both web and API testing, allowing you to test your entire application stack.
+
+3. Multi-browser support:
+   Works with Chromium, Firefox, and WebKit, enabling cross-browser testing.
+
+4. Automatic waiting:
+   Automatically waits for elements to be ready before performing actions, reducing flakiness in tests.
+
+5. Inbuilt logging and screenshot capabilities:
+   Provides built-in logging and screenshot features for better debugging and reporting.
+
+Why Playwright with Python?
+
+1. Popularity:
+   Python is one of the most popular programming languages.
+
+2. Simple syntax:
+   Python's syntax is easy to read and write, making it accessible for beginners.
+
+3. Unified technology stack:
+   Playwright with Python allows you to use the same language for both backend and frontend testing.
+
