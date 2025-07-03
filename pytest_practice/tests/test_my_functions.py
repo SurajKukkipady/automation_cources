@@ -5,3 +5,9 @@ def test_add():
     result = my_function.add(2, 3)
     assert result == 5
 
+def test_divide():
+    result = my_function.divide(10, 2)
+    assert result == 5
+
+def di
+
