@@ -10,7 +10,7 @@ def setup():
 def test_initiation_1(setup):
     print("This is the first test case")
 
-def test_initiation_2(setup):
+def test_initiation_2(pre_setup):
     print("This is the second test case")
 
 # scope can be function, class, module, or session
