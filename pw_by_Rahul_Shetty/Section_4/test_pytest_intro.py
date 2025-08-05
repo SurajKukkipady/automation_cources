@@ -6,9 +6,17 @@ import pytest
 @pytest.fixture(scope="function") # scope can be function, class, module, or session
 def setup():
     print("This is a the setup function")
+    return "Pass"
 
-def test_initiation_1(setup):
+@pytest.fixture(scope="function") # scope can be function, class, module, or session
+def setup2():
+    print("This is a the setup function 2")
+    yield
+    print("This is the teardown function 2")
+
+def test_initiation_1(setup, setup2):
     print("This is the first test case")
+    assert setup == "Pass"
 
 def test_initiation_2(pre_setup):
     print("This is the second test case")
