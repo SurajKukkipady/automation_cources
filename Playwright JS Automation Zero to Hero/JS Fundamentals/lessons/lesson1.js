@@ -16,5 +16,12 @@ console.log(age, sex)
 
 // 3. Constants
 const occupation = "Software Developer";
-//occupation = "Senior Software Developer"; //  This will cause an error because constants cannot be reassigned
+//occupation = "Senior Software Developer"; // This will cause an error because constants cannot be reassigned
 console.log(occupation); 
+
+// 4. Data Types
+var middleName = "Doe"; // String
+var ageOfBrother = 25;  // Number
+var isHeMarried = false; // Boolean
+var yearsInMarriage = null; // Null 
+var numberOfCars = undefined // Undefined
