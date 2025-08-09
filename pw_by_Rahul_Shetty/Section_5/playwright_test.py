@@ -14,4 +14,5 @@ def test_core_locators(page: Page):
     page.goto("https://rahulshettyacademy.com/loginpagePractise/")
     page.get_by_label('Username:').fill('rahulshettyacademy')
     page.get_by_label('Password:').fill('learning')
-    page.get_by_role()
+    page.get_by_role('combobox').select_option('teach')
+    #page.wait_for_timeout(5000)
