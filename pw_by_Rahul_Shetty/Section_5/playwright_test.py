@@ -1,3 +1,5 @@
+from playwright.sync_api import Page
+
 def test_playwright_basics(playwright):
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
@@ -5,5 +7,5 @@ def test_playwright_basics(playwright):
     page.goto("https://google.com")
 
 # chromium in headless by default
-def test_playwright_shortcut(page):
+def test_playwright_shortcut(page: Page):
     page.goto("https://google.com")
