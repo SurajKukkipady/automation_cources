@@ -16,5 +16,5 @@ console.log(age, sex)
 
 // 3. Constants
 const occupation = "Software Developer";
-//occupation = "Senior Software Developer"; // This will cause an error because constants cannot be reassigned
-console.log(occupation);
+//occupation = "Senior Software Developer"; //  This will cause an error because constants cannot be reassigned
+console.log(occupation); 
