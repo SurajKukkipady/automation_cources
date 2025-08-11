@@ -15,4 +15,6 @@ def test_core_locators(page: Page):
     page.get_by_label('Username:').fill('rahulshettyacademy')
     page.get_by_label('Password:').fill('learning')
     page.get_by_role('combobox').select_option('teach')
-    #page.wait_for_timeout(5000)
+    page.get_by_role("checkbox", name = "terms").click()
+    page.get_by_role('button', name='Sign In').click()
+    page.wait_for_timeout(5000)
