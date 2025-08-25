@@ -23,6 +23,12 @@ class Rectangle(Shape):
         self.width = width
         self.length = length
 
+    # def __eq__(self, other):
+    #     if not isinstance(other, Rectangle):
+    #         return False
+
+    #     return self.width == other.width and self.length ==  other.length
+
     def area(self):
         return self.width * self.length
 
